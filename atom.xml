@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-16T14:45:23+08:00</updated>
+  <updated>2018-08-16T14:55:49+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -23,6 +23,16 @@
     <id>tag:huclele.xyz,2018-08-16:/心静.html</id>
     <content type="html">&lt;p&gt;静谧夜空&lt;br&gt;  冷冷的风&lt;br&gt;  窗外无比美丽的&lt;br&gt;  城市灯火&lt;/p&gt;&#xA;</content>
     <link href="http://huclele.xyz/心静.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title></title>
+    <updated>2018-08-16T14:53:20+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/jinrong.html</id>
+    <content type="html">&lt;p&gt;金融相关名词解释，开发需要&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/jinrong.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
