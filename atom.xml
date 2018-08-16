@@ -1,51 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-17T00:22:55+08:00</updated>
+  <updated>2018-08-17T01:52:34+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
     <name>一个爱上护士的猿</name>
   </author>
   <entry>
-    <title>无题</title>
-    <updated>2018-08-16T16:10:58+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/wuti.html</id>
-    <content type="html">&lt;p&gt;城市太大，熟悉的身影&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/wuti.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>失去</title>
-    <updated>2018-08-16T15:37:58+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/shiqu.html</id>
-    <content type="html">&lt;p&gt;如果有一天 我们都发现好聚好散 不过是一种遮掩&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/shiqu.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>一段旅程</title>
-    <updated>2018-08-16T11:30:13+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/一段旅程.html</id>
-    <content type="html">&lt;p&gt;我像一个傻子似的&lt;br/&gt;追着你 宠着你&lt;br/&gt;现实&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/一段旅程.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>心静</title>
-    <updated>2018-08-16T10:16:00+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/心静.html</id>
-    <content type="html">&lt;p&gt;静谧夜空&lt;br&gt;  冷冷的风&lt;br&gt;  窗外无比美丽的&lt;br&gt;  城市灯火&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/心静.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
+    <title>七夕佳节，以此篇文章，送给我的挚爱</title>
+    <updated>2018-08-17T01:04:51+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-17:/77.html</id>
+    <content type="html">&lt;p&gt;七夕节来了，老婆，七夕节快乐，爱你，爱你，😘&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/77.html"></link>
   </entry>
   <entry>
     <title>RESTful API 设计规范</title>
@@ -63,6 +30,36 @@
     <id>tag:huclele.xyz,2018-08-16:/mianshiti.html</id>
     <content type="html"></content>
     <link href="http://huclele.xyz/mianshiti.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title>个人简历</title>
+    <updated>2018-08-16T21:40:13+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/jianli.html</id>
+    <content type="html"></content>
+    <link href="http://huclele.xyz/jianli.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title>git常用操作</title>
+    <updated>2018-08-16T20:47:20+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/git.html</id>
+    <content type="html"></content>
+    <link href="http://huclele.xyz/git.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title>无题</title>
+    <updated>2018-08-17T01:51:58+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-17:/wuti.html</id>
+    <content type="html">&lt;p&gt;城市太大，熟悉的身影&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/wuti.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
