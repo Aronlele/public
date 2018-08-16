@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-16T22:10:57+08:00</updated>
+  <updated>2018-08-17T00:22:55+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -48,21 +48,21 @@
     </author>
   </entry>
   <entry>
-    <title>个人简历</title>
-    <updated>2018-08-16T21:40:13+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/jianli.html</id>
+    <title>RESTful API 设计规范</title>
+    <updated>2018-08-16T23:35:37+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/restful.html</id>
     <content type="html"></content>
-    <link href="http://huclele.xyz/jianli.html"></link>
+    <link href="http://huclele.xyz/restful.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
   </entry>
   <entry>
-    <title>git常用操作</title>
-    <updated>2018-08-16T20:47:20+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/git.html</id>
+    <title>美团、滴滴、阿里、京东的 Dubbo / JVM / Spring 面试题及答案</title>
+    <updated>2018-08-16T23:03:20+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/mianshiti.html</id>
     <content type="html"></content>
-    <link href="http://huclele.xyz/git.html"></link>
+    <link href="http://huclele.xyz/mianshiti.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
