@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-<<<<<<< HEAD
-  <updated>2018-08-16T20:49:47+08:00</updated>
-=======
   <updated>2018-08-16T17:58:34+08:00</updated>
->>>>>>> 221909c06dd14e8e6251489841333e5f683d8a79
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -71,7 +67,6 @@
       <name>薛乐乐</name>
     </author>
   </entry>
-<<<<<<< HEAD
   <entry>
     <title>Vo、Dto、Do、Po概念以及区别与应用</title>
     <updated>2018-08-16T15:15:24+08:00</updated>
@@ -82,6 +77,4 @@
       <name>薛乐乐</name>
     </author>
   </entry>
-=======
->>>>>>> 221909c06dd14e8e6251489841333e5f683d8a79
 </feed>
