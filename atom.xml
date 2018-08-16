@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-16T17:58:34+08:00</updated>
+  <updated>2018-08-16T21:07:54+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -23,16 +23,6 @@
     <id>tag:huclele.xyz,2018-08-16:/shiqu.html</id>
     <content type="html">&lt;p&gt;如果有一天 我们都发现好聚好散 不过是一种遮掩&lt;/p&gt;&#xA;</content>
     <link href="http://huclele.xyz/shiqu.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>2018.08.16</title>
-    <updated>2018-08-16T17:58:13+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/1.html</id>
-    <content type="html">&lt;p&gt;每一天我都想，有你的陪伴，你走进我的生命里，感谢命运&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/1.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
