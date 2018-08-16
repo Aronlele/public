@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一个爱上护士的猿</title>
+  <id>http://huclele.xyz</id>
+  <updated>2018-08-16T12:34:12+08:00</updated>
+  <subtitle>攀登，是为了征服脚下不平的路</subtitle>
+  <link href="http://huclele.xyz"></link>
+  <author>
+    <name>一个爱上护士的猿</name>
+  </author>
+  <entry>
+    <title>一段旅程</title>
+    <updated>2018-08-16T11:30:13+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/一段旅程.html</id>
+    <content type="html">&lt;p&gt;我像一个傻子似的&lt;br/&gt;追着你 宠着你&lt;br/&gt;现实&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/一段旅程.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title>心静</title>
+    <updated>2018-08-16T10:16:00+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/心静.html</id>
+    <content type="html">&lt;p&gt;静谧夜空&lt;br&gt;  冷冷的风&lt;br&gt;  窗外无比美丽的&lt;br&gt;  城市灯火&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/心静.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+  <entry>
+    <title>2018.08.16</title>
+    <updated>2018-08-16T12:32:13+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/1.html</id>
+    <content type="html">&lt;p&gt;每一天我都想，有你的陪伴，你走进我的生命里，感谢命运&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/1.html"></link>
+    <author>
+      <name>薛乐乐</name>
+    </author>
+  </entry>
+</feed>
