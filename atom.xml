@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-16T17:20:50+08:00</updated>
+  <updated>2018-08-16T20:49:47+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -48,21 +48,21 @@
     </author>
   </entry>
   <entry>
-    <title>Vo、Dto、Do、Po概念以及区别与应用</title>
-    <updated>2018-08-16T15:15:24+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/entity.html</id>
-    <content type="html">&lt;p&gt;Vo、Dto、Do、Po四个对象，是开发中常用的对象，那么怎么正确使用呢？还得理解&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/entity.html"></link>
+    <title>git常用操作</title>
+    <updated>2018-08-16T20:47:20+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/git.html</id>
+    <content type="html"></content>
+    <link href="http://huclele.xyz/git.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
   </entry>
   <entry>
-    <title>金融名词解释</title>
-    <updated>2018-08-16T14:53:20+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/jinrong.html</id>
-    <content type="html">&lt;p&gt;金融相关名词解释，开发需要&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/jinrong.html"></link>
+    <title>Vo、Dto、Do、Po概念以及区别与应用</title>
+    <updated>2018-08-16T15:15:24+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-16:/entity.html</id>
+    <content type="html">&lt;p&gt;Vo、Dto、Do、Po四个对象，是开发中常用的对象，那么怎么正确使用呢？还得理解&lt;/p&gt;&#xA;</content>
+    <link href="http://huclele.xyz/entity.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
