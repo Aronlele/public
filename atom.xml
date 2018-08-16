@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-16T16:11:35+08:00</updated>
+  <updated>2018-08-16T17:10:29+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -63,26 +63,6 @@
     <id>tag:huclele.xyz,2018-08-16:/jinrong.html</id>
     <content type="html">&lt;p&gt;金融相关名词解释，开发需要&lt;/p&gt;&#xA;</content>
     <link href="http://huclele.xyz/jinrong.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>MUBU快捷使用指南</title>
-    <updated>2018-08-16T14:42:51+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/mubu.html</id>
-    <content type="html">&lt;p&gt;幕布使用指南&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/mubu.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>2018.08.16</title>
-    <updated>2018-08-16T12:32:13+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-16:/1.html</id>
-    <content type="html">&lt;p&gt;每一天我都想，有你的陪伴，你走进我的生命里，感谢命运&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/1.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
