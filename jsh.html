@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="google" value="notranslate">
+<meta name="robots" content="index,follow">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一个爱上护士的猿">
+<meta name="twitter:description" content="攀登，是为了征服脚下不平的路">
+<meta name="twitter:image:src" content="http://huclele.xyz/images/pic.jpg">
+
+<meta property="og:url" content="http://huclele.xyz">
+<meta property="og:title" content="一个爱上护士的猿">
+<meta property="og:description" content="攀登，是为了征服脚下不平的路">
+<meta property="og:site_name" content="一个爱上护士的猿">
+<meta property="og:image" content="http://huclele.xyz/images/pic.jpg">
+<meta property="og:type" content="website">
+<meta name="robots" content="noodp">
+
+<meta itemprop="name" content="一个爱上护士的猿">
+<meta itemprop="description" content="攀登，是为了征服脚下不平的路">
+<meta itemprop="image" content="http://huclele.xyz/images/pic.jpg">
+
+<link rel="canonical" href="http://huclele.xyz">
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
+<script type="text/javascript">
+    var timeSinceLang = {
+        year: '年前',
+        month: '个月前',
+        day: '天前',
+        hour: '小时前',
+        minute: '分钟前',
+        second: '秒前'
+    };
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
+</script>
+
+
+        <meta name="keywords" content="技术笔记,">
+        <meta name="description" content="JSH系统工程简介以及相关常用逻辑方法功能">
+        <meta name="author" content="薛乐乐">
+        <title>JSH系统工程简介以及相关常用逻辑方法功能</title>
+    </head>
+    <body>
+        <article class="container">
+            <header class="header-wrap">
+  <a class="index" href="/">
+    <img class="logo" src="/images/pic.jpg" />
+    一个爱上护士的猿
+  </a>
+  <ul class="menu">
+      <li class="menu-item"><a href="/archive.html">文章</a></li>
+      <li class="menu-item"><a href="/tag.html">分类</a></li>
+      <li class="menu-item"><a href="/atom.xml"></a></li>
+  </ul>
+</header>
+
+            <article class="main article">
+                <h1 class="title">JSH系统工程简介以及相关常用逻辑方法功能</h1>
+                <section class="info">
+                    <span class="avatar" style="background-image: url(/images/pic.jpg);"></span>
+                    <a class="name" href="/about.me.html">薛乐乐</a>
+                    
+                    <span class="date" data-time="1534396026"><span class="from"></span></span>
+                    
+                    <span class="tags"><a class="tag" href="/tag/%e6%8a%80%e6%9c%af%e7%ac%94%e8%ae%b0/index.html">技术笔记</a></span>
+                </section>
+                <article class="content"><hr />
+
+<h3>JSH系统工程相关笔记</h3>
+
+<h4>一、JSH系统工程相关目录（开发常用）</h4>
+
+<p>​</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">工程名</th>
+<th align="center">备注</th>
+<th align="center">常用逻辑</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">ylh-cloud-goods-api</td>
+<td align="center">易理货Spring Cloud商品服务API</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">ylh-cloud-goods-provider</td>
+<td align="center">易理货Spring Cloud商品服务provider</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">ylh-service-goods-api</td>
+<td align="center">易理货商品服务API</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">ylh-service-goods-provider</td>
+<td align="center">易理货商品服务provider</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">ylh-v2-web-goods</td>
+<td align="center">易理货二期商品模块web工程</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<h4>二、git操作</h4>
+
+<ol>
+<li>切换分支-切到需要的分支，master（预生产上线）、dev（测试上线）</li>
+</ol>
+
+<p>git co master/dev</p>
+
+<ol>
+<li>在当前分支下，更新项目</li>
+</ol>
+
+<p>git pull</p>
+
+<ol>
+<li>拉取新的分支，进行准备开发</li>
+</ol>
+
+<p>git co -b user/(任务T/事项M+了然bug号) 最新tag</p>
+
+<ol>
+<li>开发完毕，进行所有添加、提交本地</li>
+</ol>
+
+<p>git add -A</p>
+
+<p>git commit -m &ldquo;任务T/事项M+了然bug号:完整的了然标题&rdquo;</p>
+
+<ol>
+<li>提交远程change</li>
+</ol>
+
+<p>git push origin HEAD:refs/for/(master/dev) &mdash;根据具体情况提交</p>
+
+<h4>三、开发常用</h4>
+
+<h5>1.常用小方法</h5>
+
+<pre><code>StringUtils.isEmpty(storeCheckDto.getCodeOrName())//判空方法
+</code></pre>
+
+<pre><code>BeanUtils.copyProperties(s, param);//实体间属性复制（source，target）
+</code></pre>
+
+<pre><code>StringUtils.upperCase//转大写
+</code></pre>
+
+<pre><code>@CustomerPath//描述controller，用来说明伞下店
+</code></pre>
+
+<pre><code>private Logger logger = LoggerFactory.getLogger(getClass());//通用日志获取类
+</code></pre>
+
+<pre><code>Long memberId = LoginContextHelper.getShopMemberId();//理货商id
+Long customerId = LoginContextHelper.getUserMemberId();//伞下店客户id
+</code></pre>
+
+<pre><code>String date = LocalDate.now().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM&quot;));//当月时间
+</code></pre>
+
+<pre><code>List newList = monthModelTargetResult.getResult().stream()//实现流式分页
+    .skip(pager.getPageOffset())
+    .limit(monthModelTrackParam.getRows()).collect(toList());
+pager.setRecords(newList);
+pager.setTotalCount(monthModelTargetResult.getResult().size());
+pager.setSuccess(true);
+</code></pre>
+
+<pre><code>CheckEmptyUtil.isNotEmpty(）//检查是否为不空
+</code></pre>
+
+<pre><code>if (StringUtils.isNotBlank(skuId)) {//判断字符串非空
+  param.put(SKU_ID, Long.valueOf(skuId));
+}
+</code></pre>
+
+<pre><code>//获取时间符合要求的促销
+redisDtoList = redisDtoList.stream().filter(dto -&gt; dto.getMarketingEndTime() != null
+    &amp;&amp; (dto.getMarketingEndTime().getTime() - System.currentTimeMillis() &gt;= 0))
+    .collect(Collectors.toList());
+</code></pre>
+
+<pre><code>//排序
+Collections.sort(redisDtoList, Comparator
+    .comparing(MarketingCampaignRedisDto::getMarketingEndTime));
+</code></pre>
+
+<pre><code>List&lt;MarketingCampaignRedisDto&gt; list =//redis获取元素
+    JSONObject.parseArray(redis.opsForValue().get(key), MarketingCampaignRedisDto.class);
+redisDtoList.addAll(list);//集合添加集合
+</code></pre>
+
+<pre><code>setScale(2,BigDecimal.ROUND_HALF_UP)//保留两位小数，四舍五入
+</code></pre>
+
+<h5>2.开发规范</h5>
+
+<pre><code>/**
+ * 会员目标型号追踪列表.   // . 代码检查格式必须 
+ *                       //空行代码检查必须
+ * @param  monthModelTrackParam monthModelTrackParam //javadoc 非空标志
+ * @return
+ */
+</code></pre>
+
+<h5>3.常用实现</h5>
+
+<pre><code>@RequestMapping(&quot;/list&quot;)
+public ModelAndView customerList(MonthModelTrackParam monthModelTrackParam) {
+  ModelAndView mav = new ModelAndView();
+  mav.setViewName(&quot;salestarget/modelTargetTrackCustomer&quot;);
+  return mav;
+}
+/**
+视图层，适用于列表和条件查询通用情况
+跳转链接，自动执行查询方法
+*/
+</code></pre>
+
+<pre><code>@RequestMapping(&quot;/query&quot;)
+@ResponseBody
+public ExecuteResult&lt;Pager&lt;MmCustomerTrackDto&gt;&gt; customerQuery(
+    @RequestBody  MonthModelTrackParam monthModelTrackParam)
+    //最好的前后端实现返回方法
+    
+    
+    Pager pager = new Pager&lt;&gt;();
+    pager.setRows(monthModelTrackParam.getRows());
+    pager.setPage(monthModelTrackParam.getPage() == 0 ? 1 : monthModelTrackParam.getPage());
+    
+    
+    pager.setRecords(monthModelTargetResult.getResult());
+    pager.setTotalCount(monthModelTargetResult.getResult().size());
+    pager.setSuccess(true);
+    
+    // 返回信息
+    ExecuteResult&lt;Pager&lt;MmCustomerTrackDto&gt;&gt; executeResult = new ExecuteResult&lt;&gt;();
+    executeResult.setResult(pager);
+    executeResult.setSuccess(true);
+    return executeResult;
+</code></pre>
+
+<pre><code>//Excel导出功能实现
+/**
+ * 会员目标型号导出.
+ *
+ * @param  monthModelTrackParam response
+ * @return
+ */
+@RequestMapping(&quot;/import&quot;)
+public void customerImport(HttpServletResponse response,
+                           MonthModelTrackParam monthModelTrackParam) throws IOException {
+
+  Long memberId = LoginContextHelper.getShopMemberId();//理货商id
+  Long customerId = LoginContextHelper.getUserMemberId();//伞下店客户id
+  monthModelTrackParam.setMemberId(memberId);//设置理货商
+  monthModelTrackParam.setCustomerId(customerId);//设置伞下店
+  if (!&quot;&quot;.equals(monthModelTrackParam.getStartMonth())
+      || monthModelTrackParam.getStartMonth() != null) {
+    monthModelTrackParam.setStartMonth(monthModelTrackParam.getStartMonth().replace(&quot;-&quot;,&quot;&quot;));
+  }
+  if (!&quot;&quot;.equals(monthModelTrackParam.getEndMonth())
+      || monthModelTrackParam.getEndMonth() != null) {
+    monthModelTrackParam.setEndMonth(monthModelTrackParam.getEndMonth().replace(&quot;-&quot;,&quot;&quot;));
+  }
+
+  // 设置单元格内容
+  List&lt;String&gt; list = new ArrayList&lt;&gt;();
+  list.add(&quot;月份&quot;);
+  list.add(&quot;产业&quot;);
+  list.add(&quot;产品组&quot;);
+  list.add(&quot;商品编码&quot;);
+  list.add(&quot;商品型号&quot;);
+  list.add(&quot;目标&quot;);
+  list.add(&quot;实际&quot;);
+  list.add(&quot;承接占比&quot;);
+  // 创建excel的文档对象
+  XSSFWorkbook wkb = new XSSFWorkbook();
+  // 建立新的sheet对象（excel的表单）
+  Sheet sheet = wkb.createSheet(EXECL_TITLE);
+  Row row = sheet.createRow(0);
+  CellStyle cellStyle = wkb.createCellStyle();
+  cellStyle.setAlignment(HorizontalAlignment.CENTER); // 居中
+  cellStyle.setVerticalAlignment(VerticalAlignment.CENTER); // 垂直
+
+  Row row1 = sheet.createRow(1);
+  int count = 0;
+  for (int i = 0; i &lt; list.size(); i++) {
+
+    if (i &gt;= 7) {
+      Cell cell1 = row.createCell(i + 2);
+      sheet.addMergedRegion(new CellRangeAddress(0, 1, i + 2, i + 2));
+      cell1.setCellValue(list.get(i));
+      cell1.setCellStyle(cellStyle);
+    } else if (i &lt; 7 &amp;&amp; i &gt; 4) {
+      Cell cell1 = row.createCell(5 + count * 2);
+      sheet.addMergedRegion(new CellRangeAddress(0, 0, 5 + count * 2, 6 + count * 2));
+      cell1.setCellValue(list.get(i));
+      cell1.setCellStyle(cellStyle);
+      // 第二行
+      row1.createCell(5 + count * 2).setCellValue(&quot;数量（台）&quot;);
+      row1.createCell(6 + count * 2).setCellValue(&quot;金额（万元）&quot;);
+      count++;
+    } else {
+      Cell cell1 = row.createCell(i);
+      sheet.addMergedRegion(new CellRangeAddress(0, 1, i, i));
+      cell1.setCellValue(list.get(i));
+      cell1.setCellStyle(cellStyle);
+    }
+  }
+  //伞下店目标型号查询
+  ExecuteResult&lt;List&lt;MmCustomerTrackDto&gt;&gt; monthModelTargetResult =
+      cusMonthModelTargetService.findCusMonthModelTarget(monthModelTrackParam);
+
+  if (monthModelTargetResult.isSuccess()) {
+    for (MmCustomerTrackDto dto: monthModelTargetResult.getResult()) {
+      dto.setTargetAmount(dto.getTargetAmount().divide(BigDecimal.valueOf(10000)));
+      dto.setActualAmount(dto.getActualAmount().divide(BigDecimal.valueOf(10000)));
+    }
+  }
+  for (MmCustomerTrackDto customerTrackDto : monthModelTargetResult.getResult()) {
+    Row row2 = sheet.createRow(2);
+    row2.createCell(0).setCellValue(customerTrackDto.getMonthTime());
+    row2.createCell(1).setCellValue(customerTrackDto.getClassifyName());
+    row2.createCell(2).setCellValue(customerTrackDto.getProductGroupName());
+    row2.createCell(3).setCellValue(customerTrackDto.getProductCode());
+    row2.createCell(4).setCellValue(customerTrackDto.getItemModel());
+    row2.createCell(5).setCellValue(customerTrackDto.getTargetNum());
+    row2.createCell(6).setCellValue(customerTrackDto.getTargetAmount().doubleValue());
+    row2.createCell(7).setCellValue(customerTrackDto.getActualNum());
+    row2.createCell(8).setCellValue(customerTrackDto.getActualAmount().doubleValue());
+    row2.createCell(9).setCellValue(customerTrackDto.getActualAmount()
+                                        .doubleValue() / customerTrackDto.getTargetAmount()
+        .doubleValue() * 100 + &quot;%&quot;);
+  }
+  // 输出Excel文件
+  String fileName = new String(EXECL_TITLE.getBytes(), CHART_ISO);
+  response.reset();
+  response.setHeader(CONTENT_DISPOSTION, ATTACHMENT_FILENAME + fileName + XLSX);
+  response.setContentType(APPLICATION_MSEXCEL);
+  OutputStream output = response.getOutputStream();
+  wkb.write(output);
+  output.close();
+  wkb.close();
+}
+</code></pre>
+
+<pre><code>&lt;dubbo:reference interface=&quot;cn.gooday.ylh.service.salestarget.api.service.CusMonthModelTargetService&quot;
+                 id=&quot;cusMonthModelTargetService&quot; version=&quot;${jsh.dubbo.customer.order.version:1.0}&quot;/&gt;
+                 //消费者注入服务，要进行配置
+</code></pre>
+
+<pre><code>&lt;dubbo:service interface=&quot;cn.gooday.ylh.service.salestarget.api.service.CusMonthModelTargetService&quot;
+               ref=&quot;cusMonthModelTargetService&quot; version=&quot;${jsh.dubbo.provider.order.version:1.0}&quot;/&gt;
+</code></pre>
+
+<pre><code>List&lt;MmCustomerTrackDto&gt; list = cusMonthModelTargetMapper
+    .findCusMonthModelTarget(monthModelTrackParam);
+    //mapper,查询方式
+</code></pre>
+
+<pre><code>List&lt;MmCustomerTrackDto&gt; findCusMonthModelTarget(
+    @Param(&quot;param&quot;) MonthModelTrackParam monthModelTrackParam);
+    //param，可进行引用，#{param.attr}
+    //可多种形式，mapper.xml中，可以foreach
+</code></pre>
+
+<pre><code>&lt;resultMap id=&quot;RM_TargetMonthModel&quot;
+           type=&quot;cn.gooday.ylh.service.salestarget.api.dto.MmCustomerTrackDto&quot;&gt;
+           //resultMap定义结果
+</code></pre>
+
+<h5>4.常用sql</h5>
+
+<pre><code>//常见的sql条件
+sum( IFNULL( tmms.item_num, 0 )) AS item_num,
+&lt;sql id=&quot;where_condition&quot;&gt;
+  &lt;where&gt;
+    and asd_.status != 2
+    &lt;if test=&quot;param.customerId !=null &quot;&gt;
+      AND tmms.customer_id = #{param.customerId}
+    &lt;/if&gt;
+    &lt;if test=&quot;param.memberId != null&quot;&gt;
+      AND tmms.member_id = #{param.memberId}
+    &lt;/if&gt;
+    &lt;if test=&quot;param.targetClassifyId != null &quot;&gt;
+      AND tmms.target_classify_id = #{param.targetClassifyId}
+    &lt;/if&gt;
+    &lt;if test=&quot;param.classifyName != null and param.classifyName != ''&quot;&gt;
+      and target_classify_.classify_name = #{param.classifyName}
+    &lt;/if&gt;
+    &lt;if test=&quot;param.classifyCode != null and param.classifyCode != ''&quot;&gt;
+      and target_classify_.classify_code = #{param.classifyCode}
+    &lt;/if&gt;
+    &lt;if test=&quot;param.startMonth != null and param.startMonth != ''&quot;&gt;
+      &lt;![CDATA[ and tmms.month_time &gt;= #{param.startMonth} ]]&gt;
+    &lt;/if&gt;
+    &lt;if test=&quot;param.endMonth != null and param.endMonth != ''&quot;&gt;
+      &lt;![CDATA[ and tmms.month_time &lt;= #{param.endMonth} ]]&gt;
+    &lt;/if&gt;
+    &lt;if test=&quot;param.productGroupName != null and param.productGroupName != ''&quot;&gt;
+      &lt;![CDATA[ AND tmms.product_group_name like CONCAT(&quot;%&quot;,#{param.productGroupName},&quot;%&quot;) ]]&gt;
+    &lt;/if&gt;
+    &lt;if test=&quot;param.itemNameAndCode != null and param.itemNameAndCode != ''&quot;&gt;
+      &lt;![CDATA[ AND
+    (tmms.product_code like CONCAT(&quot;%&quot;,#{param.itemNameAndCode},&quot;%&quot;)
+    or tmms.item_model like CONCAT(&quot;%&quot;,#{param.itemNameAndCode},&quot;%&quot;)
+    or tmms.item_name like CONCAT(&quot;%&quot;,#{param.itemNameAndCode},&quot;%&quot;))]]&gt;
+    &lt;/if&gt;
+    //循环
+    &lt;if test=&quot;entity.skuIds != null and entity.skuIds.size()&gt;0&quot;&gt;
+      &lt;![CDATA[
+            AND a.sku_id  in
+          ]]&gt;
+      &lt;foreach collection=&quot;entity.skuIds&quot; item=&quot;skuId&quot;  open=&quot;(&quot; separator=&quot;,&quot; close=&quot;)&quot;&gt;
+        #{skuId}
+      &lt;/foreach&gt;
+    GROUP BY
+    tmms.member_id,
+    tmms.customer_id,
+    tmms.classify_code
+    limit #page.pageOffSet,#page.rows//sql分页
+  &lt;/where&gt;
+</code></pre>
+
+<pre><code>添加理货商的菜单：
+
+insert
+
+    into
+
+        sys_menu ( NAME,
+
+        url,
+
+        type,
+
+        buss_type,
+
+        pid,
+
+        `status`,
+
+        sort,
+
+        app_id ) select
+
+            &quot;目标型号达成追踪&quot;,
+
+            &quot;/shopmanager/target-month-model-track/list&quot;,
+
+            1,
+
+            1,
+
+            1039,
+
+            1,
+
+            321,
+
+            1;
+
+ insert
+
+    into
+
+        sys_permission ( CODE,
+
+        NAME,
+
+        STATUS,
+
+        sort,
+
+        app )
+
+    values ( 'target-month-model-track',
+
+    '目标型号达成追踪',
+
+    1,
+
+    22,
+
+    'YLH' );
+
+ insert
+
+    into
+
+        sys_permission_menu ( permission_id,
+
+        menu_id ) select
+
+            (
+
+            select
+
+                id
+
+            from
+
+                sys_permission
+
+            where
+
+                `name` = &quot;目标型号达成追踪&quot; ) permission_id,
+
+            id
+
+        from
+
+            sys_menu
+
+        where
+
+            `name` = &quot;目标型号达成追踪&quot;;
+
+ insert
+
+    into
+
+        sys_permission_show_group_rela ( group_id,
+
+        permission_id ) select
+
+            8,
+
+            t.id
+
+        from
+
+            sys_permission t
+
+        where
+
+            t.name = &quot;目标型号达成追踪&quot;;
+
+ 添加伞下店的菜单 insert
+
+    into
+
+        sys_menu ( NAME,
+
+        url,
+
+        type,
+
+        buss_type,
+
+        pid,
+
+        `status`,
+
+        sort,
+
+        app_id ) select
+
+            &quot;目标型号达成追踪&quot;,
+
+            &quot;/shopmanager/target-month-model-track-cus/list&quot;,
+
+            1,
+
+            0,
+
+            1073,
+
+            1,
+
+            541,
+
+            1;
+
+</code></pre>
+
+<h5>5.redis操作-StringRedisTemplate</h5>
+
+<pre><code>stringRedisTemplate.opsForValue().set(&quot;test&quot;, &quot;100&quot;,60*10,TimeUnit.SECONDS);//向redis里存入数据和设置缓存时间  
+</code></pre>
+
+<pre><code>stringRedisTemplate.boundValueOps(&quot;test&quot;).increment(-1);//val做-1操作  
+</code></pre>
+
+<pre><code>stringRedisTemplate.opsForValue().get(&quot;test&quot;)//根据key获取缓存中的val  
+</code></pre>
+
+<pre><code>stringRedisTemplate.boundValueOps(&quot;test&quot;).increment(1);//val +1  
+</code></pre>
+
+<pre><code>stringRedisTemplate.getExpire(&quot;test&quot;)//根据key获取过期时间  
+</code></pre>
+
+<pre><code>stringRedisTemplate.getExpire(&quot;test&quot;,TimeUnit.SECONDS)//根据key获取过期时间并换算成指定单位  
+</code></pre>
+
+<pre><code>stringRedisTemplate.delete(&quot;test&quot;);//根据key删除缓存  
+</code></pre>
+
+<pre><code>stringRedisTemplate.hasKey(&quot;546545&quot;);//检查key是否存在，返回boolean值  
+</code></pre>
+
+<pre><code>stringRedisTemplate.opsForSet().add(&quot;red_123&quot;, &quot;1&quot;,&quot;2&quot;,&quot;3&quot;);//向指定key中存放set集合  
+</code></pre>
+
+<pre><code>stringRedisTemplate.expire(&quot;red_123&quot;,1000 , TimeUnit.MILLISECONDS);//设置过期时间  
+</code></pre>
+
+<pre><code>stringRedisTemplate.opsForSet().isMember(&quot;red_123&quot;, &quot;1&quot;)//根据key查看集合中是否存在指定数据  
+</code></pre>
+
+<pre><code>stringRedisTemplate.opsForSet().members(&quot;red_123&quot;);//根据key获取set集合  
+</code></pre>
+
+<h4>四、前端工程启动测试方法</h4>
+
+<ol>
+<li>启动相关前端项目</li>
+</ol>
+
+<p>进入相关前端工程，git bash here</p>
+
+<p>. app-run.sh</p>
+
+<p>启动成功</p>
+
+<p>问题：若出现需要登陆之后操作，则配置</p>
+
+<pre><code>   jsh.shiro.cache.key.prefix=ylh_cache_dev
+   jsh.shiro.session.key.prefix=ylh_session_dev
+</code></pre>
+
+<ol>
+<li><p>浏览器访问 dev.yilihuo.com/index/login</p></li>
+
+<li><p>debug测试</p></li>
+
+<li><p>host配置</p></li>
+</ol>
+
+<p>12.168.3.15     3bc1fda3.ngrok.io
+   127.0.0.1     dev.yilihuo.com</p>
+
+<h4>五、数据库相关地址记录</h4>
+
+<p>服务器地址：12.168.3.71</p>
+
+<p>数据库：ylh_goods</p>
+
+<p>用户名：ylh_user</p>
+
+<p>密码：ylhuser991ui</p>
+
+<h4>六、表情况</h4>
+
+<p>​   表final_item_channel_group</p>
+
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>注释</th>
+<th>关联表</th>
+<th>类型</th>
+<th>长度</th>
+<th>可为空</th>
+<th>码值</th>
+<th>知识记录</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>主键</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td>1.spu：标准产品单位</td>
+</tr>
+
+<tr>
+<td>member_id</td>
+<td>用户memberId</td>
+<td>final_channel_member</td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td>2.sku：库存量单位</td>
+</tr>
+
+<tr>
+<td>item_id</td>
+<td>商品id</td>
+<td>final_channel_item</td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td>3.一个SKU可以对应多个SPU，简单的说： SPU就是一个iPhone6s, SKU就是银色iPhone6s、粉色iPhone6s</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>类型</td>
+<td>final_channel_type</td>
+<td>int</td>
+<td>2</td>
+<td>否</td>
+<td>类型1 产品库商品 2 总部推荐3 中心推荐4 理货商推荐5 主动引用的信息6 商家自建</td>
+<td>4.海尔目前是1:1</td>
+</tr>
+
+<tr>
+<td>target_id</td>
+<td>展示终端</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>展示终端 1海尔2统帅3海尔/统帅</td>
+<td></td>
+</tr>
+
+<tr>
+<td>channel_group_id</td>
+<td>频道分组ID</td>
+<td>final_channel_channel</td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>channel_group_name</td>
+<td>频道分组名称</td>
+<td></td>
+<td>varchar</td>
+<td>255</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>channel_group_order</td>
+<td>分组顺序</td>
+<td></td>
+<td>int</td>
+<td>6</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>start_time</td>
+<td>活动频道开始时间</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>end_time</td>
+<td>活动频道结束时间</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>create_time</td>
+<td>创建日期</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td>否</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>update_time</td>
+<td>修改日期</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>create_user_id</td>
+<td>创建人</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>update_user_id</td>
+<td>修改人</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>version</td>
+<td>版本控制</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>​   表final_item_list</p>
+
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>注释</th>
+<th>关联表</th>
+<th>类型</th>
+<th>长度</th>
+<th>可为空</th>
+<th>码值</th>
+<th>知识记录</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>id</td>
+<td>主键</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>member_id</td>
+<td>用户memberId</td>
+<td>final_channel_member</td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_id</td>
+<td>商品id</td>
+<td>final_channel_item</td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>类型</td>
+<td>final_channel_type</td>
+<td>int</td>
+<td>11</td>
+<td>否</td>
+<td>类型 各种信息类型中级别 最高的 1 产品库2 总部推荐3 中心推荐4 理货商推荐5 主动引用的信息6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>member_from</td>
+<td>来源人</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>如果是总部/中心推荐，那么为-1， 理货商推荐来源memberId</td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_item</td>
+<td>产品类型（spu）</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>类型1 产品库6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>brand_id</td>
+<td>品牌id</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>brand_en</td>
+<td>品牌code</td>
+<td></td>
+<td>varchar</td>
+<td>40</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>brand_type_id</td>
+<td>品牌类型</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>brand_name</td>
+<td>品牌名称</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>cid</td>
+<td>商品类目id</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>cid_name</td>
+<td>商品类目名称</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>product_group_code</td>
+<td>产品组编码</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>product_group_name</td>
+<td>产品组名称</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_unit</td>
+<td>商品单位;计量单位</td>
+<td></td>
+<td>varchar</td>
+<td>10</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_item_sku</td>
+<td>单品类型（sku）</td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>类型1 产品库6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_sku_id</td>
+<td>单品id</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>product_code</td>
+<td>编码</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_model</td>
+<td>型号</td>
+<td></td>
+<td>varchar</td>
+<td>100</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_member_rela</td>
+<td>关联会员类型</td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>2 总部推荐3 中心推荐4 理货商推荐5 主动引用的信息6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>target_id</td>
+<td>展示终端</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>1海尔2统帅3海尔/统帅</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_status</td>
+<td>商品状态</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>1-草稿,3-启用,30-停用,40-删除</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_member_rela_id</td>
+<td>关系管理信息表id</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>可能为null，null可以说明这个商品是推荐商品</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_status_tv</td>
+<td>云店上下架状态</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>10 上架 20 下架 null是无上下架权限</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_status_wei</td>
+<td>微商城上下架状态</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>10 上架 20 下架 null是无上下架权限</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_status_ylh</td>
+<td>易理货上下架状态</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td>10 上架 20 下架 null是无上下架权限</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ylh_upload_time</td>
+<td>易理货上架时间</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_info_part_basic</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>类型1 产品库2 总部推荐3 中心推荐4 理货商推荐5 主动引用的信息</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_name</td>
+<td>商品名称</td>
+<td></td>
+<td>varchar</td>
+<td>200</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>ad</td>
+<td>卖点</td>
+<td></td>
+<td>varchar</td>
+<td>200</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_picture</td>
+<td>图片来源</td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>类型1 产品库4 理货商推荐5 主动引用的信息6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>picture_url</td>
+<td>商品主图</td>
+<td></td>
+<td>varchar</td>
+<td>200</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_price</td>
+<td>定价来源</td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>类型1 产品库2 总部推荐3 中心推荐4 理货商推荐5 主动引用的信息</td>
+<td></td>
+</tr>
+
+<tr>
+<td>tv_sales_price</td>
+<td>智慧云店销售价</td>
+<td></td>
+<td>decimal</td>
+<td>(14,2)</td>
+<td>是</td>
+<td>原tv_price</td>
+<td></td>
+</tr>
+
+<tr>
+<td>tv_crossed_price</td>
+<td>智慧云店划线价格</td>
+<td></td>
+<td>decimal</td>
+<td>(14,2)</td>
+<td>是</td>
+<td>原crossed_price</td>
+<td></td>
+</tr>
+
+<tr>
+<td>wei_sales_price</td>
+<td>微商城销售价</td>
+<td></td>
+<td>decimal</td>
+<td>(14,2)</td>
+<td>是</td>
+<td>原wei_price</td>
+<td></td>
+</tr>
+
+<tr>
+<td>wei_crossed_price</td>
+<td>微商城划线价格</td>
+<td></td>
+<td>decimal</td>
+<td>(14,2)</td>
+<td>是</td>
+<td>原crossed_price</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_update_time</td>
+<td>商品的更新时间</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td></td>
+<td>（价格变化才变）</td>
+<td></td>
+</tr>
+
+<tr>
+<td>type_customize</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>类型5 主动引用的信息6 商家自建</td>
+<td></td>
+</tr>
+
+<tr>
+<td>sales_terminal</td>
+<td>虚拟销量</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>brokerage_price</td>
+<td>佣金金额</td>
+<td></td>
+<td>decimal</td>
+<td>(14,2)</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>promtion_rate</td>
+<td>分销佣金比率</td>
+<td></td>
+<td>decimal</td>
+<td>(3,2)</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_label_ids</td>
+<td>商品标签id</td>
+<td></td>
+<td>varchar</td>
+<td>2000</td>
+<td>是</td>
+<td>用‘，’隔开，前面后面都有&rdquo;,&ldquo;,例如 ,1,2,&lsquo;,</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_label_names</td>
+<td>商品标签名称</td>
+<td></td>
+<td>varchar</td>
+<td>4000</td>
+<td>是</td>
+<td>用‘，’隔开，前面后面都有&rdquo;&ldquo;,&rdquo;&ldquo;,例如 ,1,2,&lsquo;,</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_classify_ids</td>
+<td>商品的易理货分类id</td>
+<td></td>
+<td>varchar</td>
+<td>2000</td>
+<td>是</td>
+<td>用‘，’隔开，前面后面都有&rdquo;&ldquo;,&rdquo;&ldquo;,例如 ,1,2,&lsquo;,</td>
+<td></td>
+</tr>
+
+<tr>
+<td>item_classify_names</td>
+<td>商品的易理货分类</td>
+<td></td>
+<td>varchar</td>
+<td>4000</td>
+<td>是</td>
+<td>用‘，’隔开，前面后面都有&rdquo;&ldquo;,&rdquo;&ldquo;,例如 ,1,2,&lsquo;,</td>
+<td></td>
+</tr>
+
+<tr>
+<td>industry_control_switch</td>
+<td>授权控制开关</td>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td>是</td>
+<td>1 开启  其他 不管</td>
+<td></td>
+</tr>
+
+<tr>
+<td>cy_code</td>
+<td>产业code</td>
+<td></td>
+<td>varchar</td>
+<td>20</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>gm_code</td>
+<td>中心code</td>
+<td></td>
+<td>varchar</td>
+<td>10</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>create_time</td>
+<td>创建日期</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>update_time</td>
+<td>修改日期</td>
+<td></td>
+<td>datetime</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>create_user_id</td>
+<td>创建人</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>update_user_id</td>
+<td>修改人</td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>version</td>
+<td></td>
+<td></td>
+<td>int</td>
+<td>11</td>
+<td>是</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>select * from target_classify; #目标分类
+select * from actual_sales_details where order_id= 655 and <code>type</code> =2;//实际销售表
+select * from target_classify_setting;
+select * from target_month_sales ;
+select * from target_year_sales;
+select * from target_log;
+select * from target_month_model_sales;//目标型号月追踪表
+select * from target_month_main_push_goods_result;
+select * from target_month_model_sales_item;</p>
+
+<p>select * from member_cy;  #产业表</p>
+
+<p>select * from member_gm;  #中心</p>
+
+<pre><code>#产品组名称查询
+select 
+ a.product_group_name 
+ from 
+ item_plat_product_group a
+ left join item i on a.product_group_code = i.product_group_code
+ left join item_sku s on i.id = s.id
+ where 
+  a.industry_code='ABA' 
+  and a.industry_name='洗衣机'
+  and s.id = '2000178';
+</code></pre>
+
+<h4>七、账号以及相关地址</h4>
+
+<p>git/svn账户</p>
+
+<p>薛乐乐(lele.xue@dhc.com.cn)，登录用户名为：xuelele，登录密码为：S@7P8i$vVUJgNP$hOXIC</p>
+
+<p>git库：<a href="http://12.168.3.18:9001/#/q/status:open">http://12.168.3.18:9001/#/q/status:open</a></p>
+
+<p>巨商汇开发平台：<a href="http://12.168.3.17/">http://12.168.3.17/</a></p>
+
+<p>生产网址：<a href="http://yilihuo.com/">http://yilihuo.com/</a></p>
+
+<p>预生产网址：<a href="http://pre.yilihuo.com/">http://pre.yilihuo.com/</a></p>
+
+<p>测试网址：<a href="https://dev.yilihuo.com/">https://dev.yilihuo.com/</a></p>
+
+<p>配host：</p>
+
+<p>#巨商汇host配置
+12.168.3.15     3bc1fda3.ngrok.io
+12.168.3.15     dev.yilihuo.com</p>
+
+<p>监控平台日志：</p>
+
+<p>生产环境：<a href="http://monitor.yilihuo.com/login/index;JSESSIONID=ylh_session_prod_99ce4fcf7a2e43729a44d24d9885379e">http://monitor.yilihuo.com/login/index;JSESSIONID=ylh_session_prod_99ce4fcf7a2e43729a44d24d9885379e</a></p>
+
+<p>测试环境：</p>
+
+<p><a href="http://12.168.3.17:8095/login/index;JSESSIONID=shiro_session_monitor_8df033fa999b461a9627d1330dc1d249">http://12.168.3.17:8095/login/index;JSESSIONID=shiro_session_monitor_8df033fa999b461a9627d1330dc1d249</a></p>
+
+<p>预生产环境：</p>
+
+<p><a href="http://premonitor.yilihuo.com/login/index;JSESSIONID=ylh_session_pre_22572eb3f3bd441fb20d4327876179b0">http://premonitor.yilihuo.com/login/index;JSESSIONID=ylh_session_pre_22572eb3f3bd441fb20d4327876179b0</a></p>
+
+<p>测试账号：</p>
+
+<p>ylhtest1/123qwe &mdash;-买家
+ylhtest/123qwe &mdash;&ndash;卖家</p>
+
+<p>手机app</p>
+
+<p><a href="http://dev.yilihuo.com/v2/app/">http://dev.yilihuo.com/v2/app/</a></p>
+
+<p><a href="http://pre-m.yilihuo.com/#/">http://pre-m.yilihuo.com/#/</a></p>
+
+<p>DEV环境数据库账号密码 ：</p>
+
+<p>注：该表格为dev环境数据库账号， 其中ylh_admin账号拥有数据修改权限，但不分配表结构修改权限；ylh_工程名 则为相应工程的数据库账号，用于本地连接dev库调试。</p>
+
+<table>
+<thead>
+<tr>
+<th>数据库账号</th>
+<th>数据库密码</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ylh_admin</td>
+<td>ylh_admin331</td>
+</tr>
+
+<tr>
+<td>ylh_cloud_goods</td>
+<td>jshylhcloudgoods</td>
+</tr>
+
+<tr>
+<td>ylh_base</td>
+<td>jshylhbase</td>
+</tr>
+
+<tr>
+<td>ylh_campaign</td>
+<td>jshylhcampaign</td>
+</tr>
+
+<tr>
+<td>ylh_ecm</td>
+<td>jshylhecm</td>
+</tr>
+
+<tr>
+<td>ylh_fund</td>
+<td>jshylhfund</td>
+</tr>
+
+<tr>
+<td>ylh_goods</td>
+<td>jshylhgoods</td>
+</tr>
+
+<tr>
+<td>ylh_notice</td>
+<td>jshylhnotice</td>
+</tr>
+
+<tr>
+<td>ylh_openapi</td>
+<td>jshylhopenapi</td>
+</tr>
+
+<tr>
+<td>ylh_order</td>
+<td>jshylhorder</td>
+</tr>
+
+<tr>
+<td>ylh_price</td>
+<td>jshylhprice</td>
+</tr>
+
+<tr>
+<td>ylh_user</td>
+<td>ylhuser991ui</td>
+</tr>
+
+<tr>
+<td>ylh_unipay</td>
+<td>jshylhunipay</td>
+</tr>
+
+<tr>
+<td>ylh_interface</td>
+<td>jshylhinterface</td>
+</tr>
+</tbody>
+</table>
+</article>
+                <section class="author">
+                    <div class="avatar" style="background-image: url(/images/pic.jpg);"></div>
+                    <a class="name" href="/about.me.html">薛乐乐</a>
+                    <div class="intro">攀登，是为了征服脚下不平的路</div>
+                </section>
+                <section class="recommend">
+                    
+                    <section class="nav prev more">
+                        <div class="head">上篇文章</div>
+                        <a class="link" href="/%e5%bf%83%e9%9d%99.html">心静</a>
+                    </section>
+                    
+                    
+                    <section class="nav next more">
+                        <div class="head">下篇文章</div>
+                        <a class="link" href="/1.html">2018.08.16</a>
+                    </section>
+                    
+                </section>
+                
+    <section id="disqus_thread"></section>
+    <script type="text/javascript">
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//username.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+            </article>
+        </article>
+        <footer class="footer">
+    <span class="copyright">
+        一个爱上护士的猿 ©
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </span>
+    <span class="publish">Powered by <a href="http://huclele.xyz/" target="_blank">lele</a></span>
+</footer>
+
+        <script src="/bundle/index.js"></script>
+    </body>
+</html>
