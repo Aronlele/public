@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>一个爱上护士的猿</title>
   <id>http://huclele.xyz</id>
-  <updated>2018-08-17T01:52:34+08:00</updated>
+  <updated>2018-08-19T21:19:30+08:00</updated>
   <subtitle>攀登，是为了征服脚下不平的路</subtitle>
   <link href="http://huclele.xyz"></link>
   <author>
@@ -13,6 +13,13 @@
     <id>tag:huclele.xyz,2018-08-17:/77.html</id>
     <content type="html">&lt;p&gt;七夕节来了，老婆，七夕节快乐，爱你，爱你，😘&lt;/p&gt;&#xA;</content>
     <link href="http://huclele.xyz/77.html"></link>
+  </entry>
+  <entry>
+    <title>前端神器—Google Chrome Devtools细节详解</title>
+    <updated>2018-08-19T21:18:23+08:00</updated>
+    <id>tag:huclele.xyz,2018-08-19:/dev.html</id>
+    <content type="html"></content>
+    <link href="http://huclele.xyz/dev.html"></link>
   </entry>
   <entry>
     <title>RESTful API 设计规范</title>
@@ -50,16 +57,6 @@
     <id>tag:huclele.xyz,2018-08-16:/git.html</id>
     <content type="html"></content>
     <link href="http://huclele.xyz/git.html"></link>
-    <author>
-      <name>薛乐乐</name>
-    </author>
-  </entry>
-  <entry>
-    <title>无题</title>
-    <updated>2018-08-17T01:51:58+08:00</updated>
-    <id>tag:huclele.xyz,2018-08-17:/wuti.html</id>
-    <content type="html">&lt;p&gt;城市太大，熟悉的身影&lt;/p&gt;&#xA;</content>
-    <link href="http://huclele.xyz/wuti.html"></link>
     <author>
       <name>薛乐乐</name>
     </author>
