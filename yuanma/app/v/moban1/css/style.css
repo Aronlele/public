@@ -1,0 +1,10 @@
+@media screen and (min-width: 1000px){
+    .list-sort{
+        width: 1235px;
+        margin: 0 auto;
+    }
+    .box{
+            width: 1215px;
+        margin: 0 auto;
+    }
+}

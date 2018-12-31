@@ -1,0 +1,38 @@
+<html lang="zh">
+<head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css">
+		<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css">	
+ </head>
+ <body> 
+<?php  include($home_head);?>
+<div id="main">
+
+<div class="wrap mt10">
+	<h4>最新小说</h4>
+	<div class="box list channel">
+		<ul class="newslist">
+		
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li><a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" target="_blank"><span><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></span><?php echo $data_vod['a_name'] ?></a></li>
+<?php }?>		
+		
+
+	  </ul>
+		<div class="clear"></div>
+		<div class="pagination">
+<?php echo $page['html'];?>	
+		</div>	  
+	  
+	</div>
+
+	</div>
+</div>
+
+<?php  include($home_foot);?>
+</body></html>
+

@@ -1,0 +1,39 @@
+<div class="xing_top"> 
+   <ul> 
+    <a href="/"><li class="xing_top_left"><img src="<?php echo XXXXXXXXXX8;?>" width="200" height="60" alt="{maccms:name}" /></li> </a>
+
+    <li class="xing_top_center"> 
+     <div class="search"> 
+      <div class="search-inner"> 
+       <form action="" method="GET"> 
+	   <input type="hidden" name="C_T" value="search" /> 
+        <input type="text" x-webkit-speech="" autocomplete="off" name="C_S" id="wd" class="search-text" onblur="if(this.value==''){ this.value='影片搜索';this.style.color='#cfcdcd';}" onfocus="if(this.value=='影片搜索'){this.value='';this.style.color='';}" value="影片搜索" /> 
+        <input type="hidden" name="submit" value="search" /> 
+        <input type="submit" class="search-btn" value="搜索" /> 
+       </form> 
+      </div> 
+     </div> </li> 
+   </ul> 
+   <div style="clear:both"></div> 
+  </div> 
+  <!--  -->
+<div class="layout">
+			<div class="tbg10"></div>
+			<div class="mainArea px9">
+			<div  class="col"></div>
+
+        		<ul class="menu mt5">
+				<li><a href="/" title="默认首页" target="_blank">默认首页</a></li>
+						<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		<li><a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>" title="<?php echo $data_head['t_name']?>" target="_blank"><?php echo $data_head['t_name']?></a></li>
+
+		<?php }?>
+				
+				</ul>
+
+				<br />
+
+			</div>
+			<div class="bbg10"></div>
+</div>
+	<?php include('./inc/tou_ad.php');?>

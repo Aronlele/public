@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css">
+		<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css">			
+ </head>
+ <body>
+<?php  include($home_head);?>
+ <div id="main">
+
+<div class="wrap">
+	<h4>最新电影</h4>
+	<div class="box dy_listi">
+		<ul>
+<?php  include($home_list);?>
+	  </ul>
+		<div class="clear"></div>
+		<div class="pagination">
+ <?php echo $page['html'];?>	
+		</div>	  
+	  
+	</div>
+
+	</div>
+</div>
+<?php  include($home_foot);?>
+
+</body>
+</html>

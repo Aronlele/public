@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css">
+		<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css">			
+ </head>
+ <body>
+<?php  include($home_head);?>
+ <div id="main">
+
+<div class="wrap">
+	<h4>最新电影</h4>
+	<div class="box dy_listi">
+		<ul>
+<?php  include($home_list);?>
+	  </ul>
+	</div>
+</div>
+
+<div id="nw980">
+  <div id="nw700">
+    <div class="nbox">
+      <h3>最新图片</h3>
+      <div class="clear"></div>
+      <div class="ntext">
+        <ul>
+<?php		
+$JCCMS_LIST_SQL="select * from mac_art where a_type in (9,10,11,12,13) order by a_id desc LIMIT 0, 25 ";
+$JCCMS_LIST_SQL=execute($link, $JCCMS_LIST_SQL);
+$data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL);
+while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){
+
+?>
+<li>
+	<em> 
+		<font color="red">
+			<font style="color:red"><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></font> 
+		</font>
+	</em> 
+	<a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" title="<?php echo $data_vod['a_name'];?>" target="_blank"><?php echo $data_vod['a_name'];?></a> 
+</li>        
+<?php		
+   }
+?>
+</ul>
+ 
+		
+		
+     </div>
+    </div>
+  </div>
+</div>
+
+<div id="nw980">
+  <div id="nw700">
+    <div class="nbox">
+      <h3>最新小说</h3>
+      <div class="clear"></div>
+      <div class="ntext">
+        <ul>
+<?php		
+$JCCMS_LIST_SQL="select * from mac_art where a_type in (1,2,3,4,5,6,7,8) order by a_id desc LIMIT 0, 25 ";
+$JCCMS_LIST_SQL=execute($link, $JCCMS_LIST_SQL);
+$data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL);
+while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){
+
+?>
+<li>
+	<em> 
+		<font color="red">
+			<font style="color:red"><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></font> 
+		</font>
+	</em> 
+	<a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" title="<?php echo $data_vod['a_name'];?>" target="_blank"><?php echo $data_vod['a_name'];?></a> 
+</li>        
+<?php		
+   }
+?>
+</ul>      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+</div>
+<div id="nw980">
+  <div id="nw700">
+    <div class="nbox">
+      <h3>友情链接</h3>
+      <div class="clear"></div>
+      <div class="ntext">
+        <ul>
+<?php
+function youlian($youlian) {
+echo $XXXXXXXXXX13 = preg_replace('/&&(.*?)###(.*?)&&/si',$youlian,XXXXXXXXXX13);
+
+}
+?>
+<?php  youlian('<li><a href="$1" target="_blank"  rel="nofollow">$2</a></li>'); ?>
+      
+
+</ul>      </div>
+    </div>
+  </div>
+</div>
+ 
+<?php  include($home_foot);?>		 
+</body>
+</html>

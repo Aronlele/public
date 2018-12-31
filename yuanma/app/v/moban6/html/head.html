@@ -1,0 +1,35 @@
+<div class="xing_top">
+<ul>
+	<li class="xing_top_left"><img src="<?php echo XXXXXXXXXX8;?>" width="200" height="60" alt="{maccms:name}" /></li>
+
+</ul>
+<div  style="clear:both"></div>
+</div>
+<div  class="sddm">
+<ul id="sddm">
+	<li><a href="/">站点首页</a></li>
+	
+
+
+	<li><a href="/" onmouseover="mopen('m[matrix:num]')" onmouseout="mclosetime()">热门分类</a>
+		<div id="m[matrix:num]" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+								<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		<a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>" title="<?php echo $data_head['t_name']?>" target="_blank"><?php echo $data_head['t_name']?></a>
+
+		<?php }?>  
+		</div>
+	</li>
+
+</ul>
+<div  style="clear:both"></div>
+</div>
+
+
+
+
+
+
+<?php include('./inc/tou_ad.php');?>
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css">
+		<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css">			
+ </head>
+ <body>
+ <?php  include($home_head);?>
+ <div id="main">
+<div class="wrap mt10">
+	<div class="box cat_pos clearfix">
+		<span class="cat_pos_l"><h2><?php echo $JCCMS_d_name;?></h2></span>
+	
+</div>
+<div class="box pic_text">
+		<div class="page_title"><?php echo $JCCMS_d_name;?></div>
+		<div id="pic_text_top"></div>
+		<div class="content">
+		
+		<?php echo $JCCMS_d_TXT;?>
+	</div>
+
+		<div id="pic_text_bottom"></div>
+	</div>
+	
+	
+	
+
+</div>
+ 
+
+<?php  include($home_foot);?>
+
+</body>
+</html>		

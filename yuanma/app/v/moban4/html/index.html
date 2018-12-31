@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="<?php echo $home_css?>reset.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $home_css?>base.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $home_css?>main.css"/>
+<script type="text/javascript" src="<?php echo $home_js?>jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<?php echo $home_js?>main.js"></script></head>
+ </head>
+ <body>
+<?php  include($home_head);?>
+
+                <!-- 首页 -->
+                <div class="detail_tab detail_tab2">
+                    <div class="detail_right_div">
+                         <h3>
+                            <span class="detail_right_span">最新更新</span>
+                        </h3>
+
+                        <ul>
+						<?php  include($home_list);?>
+                               
+                                                    </ul>
+                    </div>
+                                    </div>
+                <!-- 首页 -->
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<!-- 正文 -->
+<hr>
+ <?php
+function youlian($youlian) {
+echo $XXXXXXXXXX13 = preg_replace('/&&(.*?)###(.*?)&&/si',$youlian,XXXXXXXXXX13);
+
+}
+?>
+		<div class="container" role="main">		
+
+			<div class="row">
+				<div class="well well-filters">
+					<div class="pull-left">
+						<h4>友情链接</h4>
+					</div>
+				</div>
+				<br />
+				<div class="well">
+				<?php  youlian('<a href="$1" target="_blank"  rel="nofollow">$2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'); ?>
+				</div>
+			</div><hr><br><br><br><br><br>
+<?php  include($home_foot);?>
+
+</body>
+</html>

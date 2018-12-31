@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		
+ </head>
+ <body>
+<?php  include($home_head);?>
+<div id="header_box"></div>
+<div id="top_box"></div>
+<div class="wrap mt10">
+	<div class="box cat_pos clearfix">
+		<span class="cat_pos_l">本分类视频</h2></span><span class="cat_pos_r"><em>无法播放请观看其他影片</em></span>
+	</div>
+</div>
+<div class="wrap mt10">
+	<div class="box movie_list">
+		<ul>
+<?php  include($home_list);?>
+
+			</ul>
+		<div class="clear"></div>
+		<div class="pagination">
+ <?php echo $page['html'];?>	
+		</div>
+	</div>
+</div>
+<div id="bottom_box"></div>
+<div id="footer_box"></div>
+<?php  include($home_foot);?>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="stylesheet" href="<?php echo $home_css?>style.css"/>
+<script src="<?php echo $home_js?>jquery.js"></script>
+<script src="<?php echo $home_js?>jquery.lazyload.js"></script>
+<script src="<?php echo $home_js?>jquery.autocomplete.js"></script>
+<script src="<?php echo $home_js?>home.js"></script>
+<script src="<?php echo $home_js?>tpl.js"></script>
+ </head>
+ <body>
+<?php  include($home_head);?>
+<div class="layout mt10">
+	<div class="w670 left">
+		<div class="w670_tbg"></div>
+		<div class="mainArea px14">
+			<h2><div align="center"><font color="#FF0000" style="font-size:14px">在线视频区 - 无需安装任何播放器，支持手机播放和一切移动设备播放</font></div></h2>
+			<ul class="newMovies">
+<?php  include($home_list);?>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="w670_bbg"></div>
+ </div>
+ <div class="clear"></div>
+ </div>
+
+<?php
+function youlian($youlian) {
+echo $XXXXXXXXXX13 = preg_replace('/&&(.*?)###(.*?)&&/si',$youlian,XXXXXXXXXX13);
+
+}
+?>
+		<div class="container" role="main">		
+
+			<div class="row">
+				<div class="well well-filters">
+					<div class="pull-left">
+						<h4>友情链接</h4>
+					</div>
+				</div>
+				<br />
+				<div class="well">
+				<?php  youlian('<a href="$1" target="_blank"  rel="nofollow">$2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'); ?>
+				</div>
+			</div>
+
+
+ 
+<?php  include($home_foot);?>
+
+</body>
+</html>

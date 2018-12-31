@@ -1,0 +1,44 @@
+<!-- 头部 -->
+<div class="detail_title">
+	<div class="width1200">
+		<h1><a href="/" style="background: url(<?php echo XXXXXXXXXX8;?>) no-repeat center;"></a></h1>
+        <div class="detail_submit">
+       <form action="" method="GET"> 
+	   <input type="hidden" name="C_T" value="search" /> 
+        	<input type="text" placeholder="请输入搜索关键字" id="wd" name="C_S" value=""/>
+            <input type="submit" value=""/>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!-- 头部 -->
+
+
+<!-- 正文 -->
+<div class="detail">
+	<div class="width1200">
+        <div class="detail_left">
+            <ul>
+            	<li>
+                	<h3>栏目导航<span></span></h3>
+                    <ol class="block">
+				<li><a href="/" title="默认首页" target="_blank">默认首页</a></li>
+						<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		<li><a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>" title="<?php echo $data_head['t_name']?>" target="_blank"><?php echo $data_head['t_name']?></a></li>
+
+		<?php }?>                 	
+                                            </ol>
+                </li>
+            </ul>
+
+                   </div>
+        <div class="detail_right">
+            <div class="detail_right_title ps_1" ></div><div style="clear:both;"></div>
+<div class="detail_right_title ps_2" ></div>
+<div class="detail_right_title ps_9" ></div>
+<div class="detail_right_title ps_7" ></div>
+<div class="detail_right_title ps_8" ></div>            <div class="detail_right_tab">
+
+	<?php include('./inc/tou_ad.php');?>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		
+ </head>
+ <body>
+<?php  include($home_head);?>
+ <div id="header_box"></div>
+<div id="top_box"></div>
+<div class="wrap mt10">
+	<div class="box movie_list">
+		<div class="title"><b class="sp_pri movie_ico"></b><h2>最新电影</h2></div>
+		<ul>
+<?php  include($home_list);?>	
+		</ul>
+	</div>
+<div class="wrap mt10 clearfix">
+	<div class="box list box_left">
+		<div class="title"><b class="sp_pri pic_ico"></b><h2>最新图片</h2></div>
+		<ul>
+<?php		
+$JCCMS_LIST_SQL="select * from mac_art where a_type in (9,10,11,12,13) order by a_id desc LIMIT 0, 25 ";
+$JCCMS_LIST_SQL=execute($link, $JCCMS_LIST_SQL);
+while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){
+
+?>
+
+<li><a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" target="_blank"><span><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></span><?php echo $data_vod['a_name'];?></a></li>
+      
+<?php		
+   }
+?>	
+
+		</ul>
+	</div>
+	<div class="box list box_right">
+		<div class="title"><b class="sp_pri novel_ico"></b><h2>最新小说</h2></div>
+		<ul>
+<?php		
+$JCCMS_LIST_SQL="select * from mac_art where a_type in (1,2,3,4,5,6,7,8) order by a_id desc LIMIT 0, 25 ";
+$JCCMS_LIST_SQL=execute($link, $JCCMS_LIST_SQL);
+while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){
+
+?>
+
+<li><a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" target="_blank"><span><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></span><?php echo $data_vod['a_name'];?></a></li>
+      
+<?php		
+   }
+?>
+		</ul>
+	</div>
+	</div>
+<div class="wrap mt10 clearfix">
+	<div class="box movie_list">
+<div class="ylink clearfix">
+		<h3><i class="iconfont f-s-16 m-r-5">󰅋</i> 友情链接<span class="links-tz">【本站将不定期清理黑链、无效以及垃圾链接.恕不另行通知！】 </span></h3>
+ <?php
+function youlian($youlian) {
+echo $XXXXXXXXXX13 = preg_replace('/&&(.*?)###(.*?)&&/si',$youlian,XXXXXXXXXX13);
+
+}
+?>
+<?php  youlian('<a href="$1" target="_blank"  rel="nofollow">$2</a>'); ?>
+
+</div>
+	</section>
+</div>
+</div>
+</div>
+<div id="bottom_box"></div>
+<div id="footer_box"></div>
+ 
+<?php  include($home_foot);?>		 
+</body>
+</html>

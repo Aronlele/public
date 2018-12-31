@@ -1,0 +1,16 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li id="video">
+	<div class="video">
+		<a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>" title="<?php echo $data_vod['d_name'] ?>" class="thumbnail" target="_blank">
+			<div class="video-thumb"> 
+				<img onerror="this.src='<?php echo $home_images?>nopic.gif'" src="<?php echo $data_vod['d_pic'] ?>" alt="<?php echo $data_vod['d_name'] ?>" width="200" height="135"/> 
+			</div>
+			<span class="video-title"><?php echo $data_vod['d_name'] ?></span> 
+
+		</a>
+	</div>
+</li>
+
+
+
+<?php }?>

@@ -1,0 +1,32 @@
+
+    <div class="header"> 
+     <div class="logo"> 
+      <a href="/" style="display: block;width: 279px;height: 47px;background: url('<?php echo XXXXXXXXXX8;?>') no-repeat;"></a> 
+     </div> 
+     <div class="social-bookmarks"> 
+     </div> 
+     <div class="search"> 
+      <form id="search_form" action="" method="GET">
+      <input type="submit" value="so" class="search-button">	  
+       <div class="search-text">
+	   <input type="hidden" name="C_T" value="search" /> 
+        <input id="wd" name="C_S"  class="search-text" type="text" placeholder="输入关键词搜索..." value="" />  
+       </div>   
+      </form> 
+     </div> 
+     <nav> 
+      <div class="navigation"> 
+       <button class="button"> <span class="icon"> <span class="ico-bar"></span> <span class="ico-bar"></span> <span class="ico-bar"></span> </span> </button> 
+       <ul class="primary" style="width:100%"> 
+        <li class="selected"> <a href="/" id="itemidx" style="width:100px">首页</a> </li> 
+
+		<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		 <li> <a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>" id="item" title="<?php echo $data_head['t_name']?>" ><?php echo $data_head['t_name']?></a> </li>
+		<?php }?>
+       </ul> 
+       <ul class="secondary"> 
+       </ul> 
+      </div> 
+     </nav> 
+    </div>
+	<?php include('./inc/tou_ad.php');?>

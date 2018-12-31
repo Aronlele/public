@@ -1,0 +1,38 @@
+   <div id="header"> 
+   <table cellspacing="0" cellpadding="0" align="center" width="100%"> 
+    <tbody>
+     <tr> 
+      <td class="banner">
+       <div style="float:left;height:50px;width:auto;margin-left:5px;">
+        <h3><a href="/"><font style="color:#fff"><?php echo XXXXXXXXXX1;?></font></a></h3>
+       </div> 
+       <div style="float:right;height:50px;">
+        <div id="sideMenu"><span id="sideMenuClosed"><span class="icon-bar"></span><span class="icon-bar"style="margin-top:5px;"></span><span class="icon-bar"style="margin-top:5px;"></span></span> </div>
+       </div> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+
+
+   <div id="blank" style="height:10px; clear:both"></div> 
+  </div> 
+  <div id="main"> 
+   <!--ads begin--> 
+   <!--ads end--> 
+   <div class="t"> 
+    <table cellspacing="0" cellpadding="0" width="100%"> 
+     <tbody>
+      <tr class="tr3"> 
+        <td style="border-left:0;text-align:right;padding-right:12px;word-break:keep-all">
+		<a href="/" title="默认首页" target="_blank">默认首页</a>
+   						<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		<a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>"><?php echo $data_head['t_name']?></a> |
+
+		<?php }?>   
+</td> 
+      </tr> 
+     </tbody>
+    </table>
+   </div> 
+
+	<?php include('./inc/tou_ad.php');?>

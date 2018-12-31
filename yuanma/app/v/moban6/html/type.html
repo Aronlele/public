@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="<?php echo $home_css?>home.css" rel="stylesheet" type="text/css" />
+<script src="<?php echo $home_js?>jquery.js"></script>
+<script src="<?php echo $home_js?>jq/jquery.lazyload.js"></script>
+<script src="<?php echo $home_js?>home.js"></script>
+<script type="text/javascript">
+<!--
+var timeout= 500;
+var closetimer= 0;
+var ddmenuitem= 0;
+function mopen(id)
+{	
+	mcancelclosetime();
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+}
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+document.onclick = mclose; 
+// -->
+</script>
+ </head>
+ <body>
+<?php  include($home_head);?>
+		
+  <div class="xing_vb"> 
+   <ul>
+    <li><span class="xing_vb1">影片名称</span><span class="xing_vb2">影片类别</span><span class="xing_vb3">更新时间</span></li>
+   </ul> 
+				<?php  include($home_list);?>
+   <ul style="display:block;clear:both;">
+    <li><div class="pages" style="margin-bottom:10px;">
+<?php echo $page['html'];?>
+	</div></li>
+   </ul> 
+
+ 
+   <div style="clear:both"></div> 
+  </div> 	
+
+
+
+<?php  include($home_foot);?>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ </head>
+ <body>
+<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css"/>
+
+  <!--  Baidu sitemap.xml analytics --> 
+<div class="top-links"> 
+
+   <div class="container"> 
+<?php  include($home_head);?>
+  <div class="content"> 
+   <div class="main-content"> 
+    <div class="sidebar"> 
+     <ul class="list">
+		<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		 <li> <a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>"><?php echo $data_head['t_name']?></a> </li>
+		<?php }?>	 
+
+     
+     </ul> 
+    </div> 
+    <div class="main-container"> 
+     <div id="list_videos_common_videos_list"> 
+      <div class="headline"> 
+       <h1> 关键词：<?php echo $_GET['C_S'];?>的所有数据 </h1>  
+      </div> 
+      <div class="box"> 
+       <div class="list-videos"> 
+        <div class="margin-fix" id="list_videos_common_videos_list_items"> 
+<?php  include($home_list);?>
+        </div> 
+       </div> 
+       <div class="page clearfix">
+       <?php echo $page['html'];?>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>    ﻿ 
+    <!-- 底部信息 -->
+﻿<div class="footer-margin">
+    <div class="content">
+    </div>
+</div>
+</div>
+<?php  include($home_foot);?>
+
+</body>
+</html>

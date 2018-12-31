@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link rel="stylesheet" href="<?php echo $home_css?>style.css"/>
+		<script src="<?php echo $home_js?>jquery.js"></script>
+		<script src="<?php echo $home_js?>jquery.lazyload.js"></script>
+		<script src="<?php echo $home_js?>jquery.autocomplete.js"></script>
+		<script src="<?php echo $home_js?>home.js"></script>
+		<script src="<?php echo $home_js?>tpl.js"></script>
+ </head>
+ <body>
+ <?php  include($home_head);?>
+<div class="layout mt10">
+	<div class="tbg10"></div>
+	<div class="mainArea px19">
+		<div class="position"><?php echo $JCCMS_d_name;?></div>
+	</div>
+	<div class="bbg10"></div>
+</div>
+		<div class="layout mt10">
+			<div class="tbg20"></div>
+			<div class="mainArea px9">
+			<?php echo $JCCMS_d_TXT;?>
+				<div class="clear"></div>
+			</div>
+			<div class="bbg20"></div>
+		</div>
+ 
+<?php  include($home_foot);?>
+
+</body>
+</html>		

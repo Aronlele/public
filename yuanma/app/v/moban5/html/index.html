@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link href="<?php echo $home_images?>style.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="<?php echo $home_js?>system.js"></script>
+
+
+</head>
+ </head>
+ <body>
+<?php  include($home_head);?>
+   <div class="t">
+    <table cellspacing="0" cellpadding="0" width="100%"> 
+     <tbody>
+      <tr>
+       <th class="h" colspan="6"> &raquo; <h2><a href="/" class="cfont">最新更新</a></h2> </th> 
+      </tr> 
+      <tr></tr> 
+      <tr class="tr2 tac"> 
+       <td width="*" colspan="2">标题</td> 
+       <td style="width:10%">热度</td> 
+       <td style="width:10%">地区</td> 
+       <td style="width:10%">最後發表</td> 
+       <td style="width:10%">版主</td> 
+      </tr> 
+	  
+     </tbody>
+     <tbody id="cate_1" style=""> 
+<?php  include($home_list);?>
+	
+      <tr>
+       <td style="height:8px"></td>
+      </tr> 
+     </tbody> 
+    </table> 
+   </div> 
+   
+<?php
+function youlian($youlian) {
+echo $XXXXXXXXXX13 = preg_replace('/&&(.*?)###(.*?)&&/si',$youlian,XXXXXXXXXX13);
+
+}
+?>
+		<div class="container" role="main">		
+
+			<div class="row">
+				<div class="well well-filters">
+					<div class="pull-left">
+						<h4>友情链接</h4>
+					</div>
+				</div>
+				<br />
+				<div class="well">
+				<?php  youlian('<a href="$1" target="_blank"  rel="nofollow">$2</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'); ?>
+				</div>
+			</div>
+
+ 
+<?php  include($home_foot);?>
+
+</body>
+</html>

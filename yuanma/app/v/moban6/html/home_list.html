@@ -1,0 +1,11 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+   <ul>
+    <li><span class="tt"></span>
+	<span class="xing_vb4">
+	<a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>" target="_blank"><?php echo $data_vod['d_name'];?></a></span> 
+	<span class="xing_vb5">热门视频</span> 
+	<span class="xing_vb6"><?php echo date('y-m-d h:i:s',time());?></span></li>
+   </ul> 
+
+
+<?php }?>

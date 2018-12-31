@@ -1,0 +1,5 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li><a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>" target="_blank"><img src="<?php echo $data_vod['d_pic'] ?>"  /><h3><?php echo $data_vod['d_name'] ?></h3><span class="movie_date"><!--[if lt IE 9 ]><span class="bg_top"><![endif]--><?php echo date("Y-m-d H:i",$data_vod['d_time']) ?><!--[if lt IE 9 ]></span><span class="bg_tail"></span><![endif]--></span></a></li>
+
+
+<?php }?>

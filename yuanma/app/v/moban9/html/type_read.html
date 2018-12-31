@@ -1,0 +1,39 @@
+<html lang="zh">
+<head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+
+ </head>
+ <body> 
+<?php  include($home_head);?>
+<div id="header_box"></div>
+<div id="top_box"></div>
+<div class="wrap mt10">
+	<div class="box cat_pos clearfix">
+		<span class="cat_pos_l">小说区</span>
+	</div>
+</div>
+<div class="wrap mt10">
+	<div class="box list channel">
+		<ul>
+			<div id="text_box"></div>
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li><a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" target="_blank"><span><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></span><?php echo $data_vod['a_name'] ?></a></li>
+
+<?php }?>			
+		</ul>
+		<div class="clear"></div>
+		<div class="pagination">
+<?php echo $page['html'];?>	
+		</div>
+	</div>
+</div>
+<div id="bottom_box"></div>
+<div id="footer_box"></div>
+
+<?php  include($home_foot);?>
+</body></html>
+

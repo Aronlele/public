@@ -1,0 +1,35 @@
+<html lang="zh"><head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link rel="stylesheet" href="<?php echo $home_css?>style.css"/>
+		<script src="<?php echo $home_js?>jquery.js"></script>
+		<script src="<?php echo $home_js?>jquery.lazyload.js"></script>
+		<script src="<?php echo $home_js?>jquery.autocomplete.js"></script>
+		<script src="<?php echo $home_js?>home.js"></script>
+		<script src="<?php echo $home_js?>tpl.js"></script>
+ </head>
+ <body> 
+<?php  include($home_head);?>
+<div class="layout mt10">
+	<div class="tbg20"></div>
+	<div class="mainArea">
+		<ul class="textList">
+			<div id="text"></div>
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li><a href="?C_T=read&C_id=<?php echo $data_vod['a_id']?>" target="_blank"><span><?php echo date("Y-m-d H:i",$data_vod['a_time']) ?></span><?php echo $data_vod['a_name'] ?></a></li>
+<?php }?>	
+		</ul>
+		<div class="clear"></div>
+		<div class="pageNav px19">
+
+			<div class="pageList"><?php echo $page['html'];?>
+   </div>
+		</div>
+	</div>
+	<div class="bbg20"></div>
+</div>
+<?php  include($home_foot);?>
+</body></html>
+

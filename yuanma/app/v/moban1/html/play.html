@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ </head>
+ <body>
+<link href="<?php echo $home_css?>all-responsive-metal.css?v=0708" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $home_css?>jquery.fancybox-metal.css?v=4.0" rel="stylesheet" type="text/css"/>
+
+  <!--  Baidu sitemap.xml analytics --> 
+<div class="top-links"> 
+
+   <div class="container"> 
+<?php  include($home_head);?> 
+ <div class="content">
+        <div class="headline">
+            <h1><?php echo $JCCMS_d_name;?></h1> </div>
+        <div class="block-video">
+            <div class="video-holder">
+                <div class="player">
+                   <div class="player-holder">
+                        <script type="text/javascript" src="/app/ckplayer/ckplayer.js"></script>
+						<div id="video" style="width: 100%; height: 500px;"></div>
+						<script type="text/javascript">
+							var videoObject = {
+								container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
+								variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+								flashplayer:false,//如果强制使用flashplayer则设置成true
+								video:'<?php echo $JCCMS_d_playurl;?>'//视频地址
+							};
+							var player=new ckplayer(videoObject);
+						</script>
+					<div id="aa"></div>
+                    </div></div></div>
+            </div>
+        </div>
+		<?php include('./inc/bf_ad.php');?>	
+    <!-- 底部信息 -->
+﻿<div class="footer-margin">
+    <div class="content">
+    </div>
+</div>
+</div>
+<?php  include($home_foot);?>
+
+</body>
+</html>		

@@ -1,0 +1,4 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+<li><a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>" target="_blank"><h3><?php echo $data_vod['d_name'] ?></h3><img src="<?php echo $data_vod['d_pic'] ?>" data-original="<?php echo $data_vod['d_pic'] ?>" /><p><?php echo date("Y-m-d H:i",$data_vod['d_time']) ?></p></a></li>	
+
+<?php }?>

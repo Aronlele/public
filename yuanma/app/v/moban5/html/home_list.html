@@ -1,0 +1,14 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+
+
+
+      <tr class="tr3 f_one"> 
+       <td width="*" colspan="2"><a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>" target="_blank"><?php echo $data_vod['d_name'] ?></a></td> 
+       <td style="width:10%"><?php  echo(mt_rand(1000,10000));?></td> 
+       <td style="width:10%">亚洲地区</td> 
+       <td style="width:10%"><?php echo date('y-m-d h:i:s',time());?></td> 
+       <td style="width:10%">9CCMS</td> 
+      </tr> 
+
+
+<?php }?>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+		<title><?php echo $JCCMS_title;?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="<?php echo $JCCMS_keywords;?>">
+		<meta name="description" content="<?php echo $JCCMS_description;?>">
+		<link href="<?php echo $home_css?>style.css" rel="stylesheet" type="text/css">		
+		
+ </head>
+ <body>
+ <?php  include($home_head);?>
+<div id="header_box"></div>
+<div id="top_box"></div>
+<div class="wrap mt10">
+	<div class="box cat_pos clearfix">
+		<span class="cat_pos_l">您的位置：<h1><?php echo $JCCMS_d_name;?></h1></span>
+	</div>
+</div>
+<div class="wrap mt10">
+	<div class="box play">
+		<div class="player">
+			<div  align="center">
+<script type="text/javascript" src="/app/ckplayer/ckplayer.js"></script>
+						<div id="video" style="width: 100%; height: 500px;"></div>
+						<script type="text/javascript">
+							var videoObject = {
+								container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
+								variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+								flashplayer:false,//如果强制使用flashplayer则设置成true
+								video:'<?php echo $JCCMS_d_playurl;?>'//视频地址
+							};
+							var player=new ckplayer(videoObject);
+						</script>
+			</div>
+		
+			<div class="clear"></div>
+		</div>
+		<div class="copyright">	
+<font size="3" color="red"><strong>部分当日更新影片需要完成转码后才能播放，如遇到不能播放的情况建议24小时之后在进行观看。</strong></font>
+	</div>
+</div>
+<?php include('./inc/bf_ad.php');?>		
+<div id="bottom_box"></div>
+<div id="footer_box"></div>
+
+<?php  include($home_foot);?>
+
+</body>
+</html>		

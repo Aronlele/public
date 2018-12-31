@@ -1,0 +1,74 @@
+<div id="login-container"></div>
+<header>
+<div class="nav-top navbar-inverse">
+<div class="container">
+<ul class="nav nav-pills top-menu">
+<li class="dropdown"> <a href="#language" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" role="button"> <img src="<?php echo $home_images?>us.png" alt="en-US" /> <span class="caret"></span> </a>
+<ul id="language-select" class="dropdown-menu dropdown-menu-right" role="menu">
+<li class="active"><a href="#en-US" rel="nofollow"><img src="<?php echo $home_images?>us.png" alt="en-US" /> 中/英文 (美利坚合众国)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="nav-content">
+<div class="container">
+<div class="logo"> <a href="{maccms:path}"><img src="<?php echo XXXXXXXXXX8;?>" alt="AV淘宝" /></a> </div>
+<div class="search">
+<form id="search-form" action="" method="GET">
+<button type="submit" name="submit" class="btn btn-default btn-lg pull-right btn-submit"><i class="fa fa-search"></i></button>
+<div class="input-group input-group-lg">
+	   <input type="hidden" name="C_T" value="search" />  
+<input type="text" id="wd" name="C_S" class="form-control" onblur="if(this.value==''){ this.value='影片搜索';this.style.color='#cfcdcd';}" onfocus="if(this.value=='影片搜索'){this.value='';this.style.color='';}" value="影片搜索" />
+<div class="input-group-btn">
+<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i id="search-icon" class="fa fa-video-camera"></i> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button>
+<ul class="dropdown-menu pull-right" role="menu">
+<li class="active"><a href="#search-videos" class="search-in-video"><i class="fa fa-video-camera"></i> 视频</a></li>
+</ul>
+</div>
+</div>
+</form>
+</div>
+<div class="clearfix"></div>
+<nav class="navbar navbar-inverse" role="navigation" id="menu-main">
+<div class="container-fluid">
+<div class="navbar-header" id="menu-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-main-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+<span class="navbar-toggle navbar-menu">Menu</span> </div>
+<div class="collapse navbar-collapse" id="menu-main-collapse">
+<ul id="menu-main-content" class="nav navbar-nav">
+<li><a href="/">首页</a></li>
+
+		<?php  while($data_head=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEAD)){?>
+		<li><a href="?C_T=type&C_id=<?php echo $data_head['t_id']?>" title="<?php echo $data_head['t_name']?>" target="_blank"><?php echo $data_head['t_name']?></a></li>
+
+		<?php }?>
+
+</ul>
+
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div class="ads">
+	<?php include('./inc/tou_ad.php');?>
+</div>
+</header>
+
+<div class="container">
+<div id="content" class="row">
+<div class="col-md-2 hidden-xs hidden-sm">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">目录</h3>
+</div>
+<div class="panel-body no-padding">
+<ul class="nav nav-stacked navigation">
+		<?php  while($data_heads=mysqli_fetch_assoc($JCCMS_LIST_SQL_HEADS)){?>
+		<li><a href="?C_T=type&C_id=<?php echo $data_heads['t_id']?>" title="<?php echo $data_heads['t_name']?>" target="_blank"><?php echo $data_heads['t_name']?></a></li>
+
+		<?php }?></ul>
+</div>
+</div>
+</div>

@@ -1,0 +1,11 @@
+<?php  while($data_vod=mysqli_fetch_assoc($JCCMS_LIST_SQL)){?>
+                        	                            <li>
+                                <p class="img">
+                                    <img class="lazy" data-original="<?php echo $data_vod['d_pic'] ?>" src="<?php echo $data_vod['d_pic'] ?>" alt="<?php echo $data_vod['d_name'] ?>" title="<?php echo $data_vod['d_name'] ?>" onerror="this.src='<?php echo $data_vod['d_pic'] ?>'"/>
+                                    <a href="?C_T=play&C_id=<?php echo $data_vod['d_id']?>"></a>
+                                </p>
+                                <p><?php echo $data_vod['d_name'] ?></p>
+
+                            </li>
+
+<?php }?>
